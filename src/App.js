@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-
 import { Route, Link } from 'react-router-dom'
 import ListWant from './components/ListWant'
 import ListRead from './components/ListRead'
@@ -14,7 +13,7 @@ class BooksApp extends React.Component {
   }
   componentDidMount() {
     BooksAPI.getAll().then((books) => {
-      this.setState({ books : books })
+      this.setState({ books })
     });
   }
   render() {
