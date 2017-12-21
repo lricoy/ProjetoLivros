@@ -5,7 +5,7 @@ class ListReading extends Component {
 
     render() {
 
-        const { title, books } = this.props;
+        const { title, books = [] } = this.props;
 
 
         return (
@@ -13,7 +13,7 @@ class ListReading extends Component {
                 <h2 className="bookshelf-title">{title}</h2>
                 <div className="bookshelf-books">
                     <ol className="books-grid">
-                        {({books = []}) => (books.map((book) => (
+                        {books.map((book) => (
                             <li key={book.id}>
                                 <div className="book">
                                     <div className="book-top">
@@ -31,7 +31,7 @@ class ListReading extends Component {
                                     <div className="book-title">{book.title}</div>
                                     <div className="book-authors">Harper Lee</div>
                                 </div>
-                            </li>)))}
+                            </li>))}
 
                     </ol>
                 </div>
